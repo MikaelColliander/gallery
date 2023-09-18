@@ -1,14 +1,10 @@
-import { useEmployeesData } from "../../providers/EmployeesDataProvider";
-
-const Card = () => {
-  const employees = useEmployeesData();
+const Card:React.FC<{children: React.ReactNode}> = ({ children }) => {
+    children
 
   return (
-    <ul>
-      {employees.value?.map((employee) => (
-        <li>{employee.name}</li>
-      ))}
-    </ul>
+    <div className="c-card">
+        {children}
+    </div>
   );
 };
 

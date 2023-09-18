@@ -27,7 +27,7 @@ export const EmployeesDataProvider: React.FC<{
 
     (async (): Promise<void> => {
     
-        //   const result = await apiRequest("https://api.1337co.de/v3/employees", {
+    //   const result = await apiRequest("https://api.1337co.de/v3/employees", {
     //     headers: {
     //       Authorization: import.meta.env.VITE_API_KEY,
     //     },
@@ -38,7 +38,7 @@ export const EmployeesDataProvider: React.FC<{
       if (result) {
         setState({
           status: "LOADED",
-          value: result,
+          value: result.filter((employee:Employee) => employee.office),
         });
       } else {
         setState({ status: "ERROR", value: undefined });
