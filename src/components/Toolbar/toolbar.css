@@ -1,0 +1,48 @@
+@import "../../css/text-styles.css";
+@import "../../css/breakpoints.css";
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+
+.toolbar-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.toolbar-inner > * {
+    margin-bottom: 1em;
+}
+
+.toolbar-fieldset {
+    text-align: left;
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar-legend {
+    @mixin textStyleLabel;
+    margin-bottom: 8px;
+}
+
+@media (--sm) {
+    .toolbar {
+        flex-wrap: nowrap;
+    }
+
+    .toolbar-inner > * {
+        margin-bottom: 0;
+    }
+}
+
+@media (--md) {
+    .toolbar-fieldset {
+        display: block;
+    }
+}

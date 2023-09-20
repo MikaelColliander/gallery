@@ -1,7 +1,16 @@
+:root {
+    --font-family: Helvetica, Arial, sans-serif;
+}
 
 @define-mixin textStyleTitle {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    font-family: var(--font-family);
+    font-weight: 400;
     line-height: 1.5;
     font-size: 1.2em;
+}
+
+@define-mixin textStyleLabel {
+    @mixin textStyleTitle;
+    font-weight: 700;
+    font-size: 1em;
 }

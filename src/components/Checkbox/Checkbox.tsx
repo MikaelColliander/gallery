@@ -26,12 +26,11 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   onChange,
 }) => {
   return (
-    <label className="checkbox" tabIndex={0} onClick={onClick}>
+    <label className="checkbox" onClick={onClick}>
       <input
         value={name}
         className="checkbox-input"
         type="checkbox"
-        tabIndex={-1}
         aria-checked={checked}
         id={id}
         name={name}

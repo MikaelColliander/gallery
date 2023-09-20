@@ -10,8 +10,8 @@ interface SwitchProps {
 export const Switch: React.FC<SwitchProps> = ({ btn1, btn2, label }) => {
   return (
     <div className="switch">
+        {label && <span className="text-style-label">{label}</span>}
       <div className="switch-track">
-        {label && <span>label{}</span>}
         <div className="switch-track">
           <Button {...btn1} />
           <Button {...btn2} />

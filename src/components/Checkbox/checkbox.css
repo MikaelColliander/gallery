@@ -1,3 +1,11 @@
+@import "../../css/text-styles.css";
+
+.checkbox {
+    @mixin textStyleLabel;
+    font-weight: 400;
+    margin-right: 24px;
+}
+
 .checkbox-input {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -6,4 +14,9 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
+}
+
+.checkbox-icon {
+    vertical-align: middle;
+    margin-right: 8px;
 }

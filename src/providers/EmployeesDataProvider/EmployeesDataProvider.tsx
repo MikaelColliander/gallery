@@ -27,13 +27,13 @@ export const EmployeesDataProvider: React.FC<{
 
     (async (): Promise<void> => {
     
-    //   const result = await apiRequest("https://api.1337co.de/v3/employees", {
-    //     headers: {
-    //       Authorization: import.meta.env.VITE_API_KEY,
-    //     },
-    //   });
+      const result = await apiRequest("https://api.1337co.de/v3/employees", {
+        headers: {
+          Authorization: import.meta.env.VITE_API_KEY,
+        },
+      });
     
-    const result = await apiRequest("./employees.json");
+    // const result = await apiRequest("./employees.json");
 
       if (result) {
         setState({

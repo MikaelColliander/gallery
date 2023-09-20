@@ -3,6 +3,8 @@
 .switch {
     text-align: center;
     display: inline-block;
+    white-space: nowrap;
+    align-self: end;
 }
 
 .switch-track {

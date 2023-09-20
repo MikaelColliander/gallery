@@ -5,7 +5,7 @@ export type ViewMode = "gallery" | "list";
 export type ImageType = "wallOfLeet" | "portrait";
 export type SortOption = "office" | "name" | undefined;
 export type Filter = string[];
-export type FilterString = string | undefined;
+export type FilterString = string;
 
 export type Action = {
   type:
@@ -57,7 +57,7 @@ function configReducer(state: State, action: Action) {
       return Object.assign( stateObj, { viewMode: action.viewMode });
     }
     case "setFilterString": {
-      return Object.assign({ filterString: action.filterString }, stateObj);
+      return Object.assign(stateObj, { filterString: action.filterString });
     }
     case "setOffices": {
       return Object.assign(stateObj, { filter: action.filter });
@@ -73,7 +73,7 @@ export function ConfigProvider({ children }: ConfigProviderProps) {
     viewMode: "gallery",
     imageType: "wallOfLeet",
     sortOption: undefined,
-    filterString: undefined,
+    filterString: "",
     filter: ["Stockholm", "Lund", "Ljubljana", "Helsingborg", "Borlänge"],
   });   
   const value = { state, dispatch };

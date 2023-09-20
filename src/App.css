@@ -1,8 +1,15 @@
 @import "./css/colors.css";
 @import "./css/breakpoints.css";
+@import "./css/text-styles.css";
 
 body {
   background-color: var(--color-background-primary);
+}
+
+h1.main-heading {
+  font-size: clamp(2em, 8vw, 3.2em);
+  margin-bottom: 0.5em;
+  text-align: left;
 }
 
 #root {
@@ -25,3 +32,6 @@ body {
   }
 }
 
+.text-style-label {
+  @mixin textStyleLabel;
+}
