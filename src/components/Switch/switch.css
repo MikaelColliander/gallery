@@ -1,0 +1,11 @@
+@import "../../css/border-radius.css";
+
+.switch {
+    text-align: center;
+    display: inline-block;
+}
+
+.switch-track {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-triple);
+}

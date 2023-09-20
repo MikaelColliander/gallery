@@ -4,7 +4,7 @@ export type ConfigProviderProps = { children: React.ReactNode };
 export type ViewMode = "gallery" | "list";
 export type ImageType = "wallOfLeet" | "portrait";
 export type SortOption = "office" | "name" | undefined;
-export type Filter = string[] | undefined;
+export type Filter = string[];
 export type FilterString = string | undefined;
 
 export type Action = {
@@ -60,7 +60,7 @@ function configReducer(state: State, action: Action) {
       return Object.assign({ filterString: action.filterString }, stateObj);
     }
     case "setOffices": {
-      return Object.assign({ filter: state.filter }, stateObj);
+      return Object.assign(stateObj, { filter: action.filter });
     }
     default: {
       throw new Error(`Unhandled action type: ${action}`);
@@ -74,8 +74,8 @@ export function ConfigProvider({ children }: ConfigProviderProps) {
     imageType: "wallOfLeet",
     sortOption: undefined,
     filterString: undefined,
-    filter: undefined,
-  });
+    filter: ["Stockholm", "Lund", "Ljubljana", "Helsingborg", "Borlänge"],
+  });   
   const value = { state, dispatch };
   return (
     <ConfigStateContext.Provider value={value}>

@@ -6,14 +6,14 @@ import Card from "../Card";
 import Contact from "../Contact";
 
 const ItemView = () => {
-  const employees = useEmployeesData();
   const { state } = useConfig();
+  const employees = useEmployeesData().value?.filter(employee => state.filter.includes(employee.office));
 
   return (
     <>
     <Toolbar />
         <Grid size={`${state.viewMode === "gallery" ? "sm:2 md:3 lg:4" : "sm:1 md:2 lg:2"}`}>
-          {employees.value?.map((employee) => (
+          {employees?.map((employee) => (
             <Card key={employee.name}>
               <Contact {...employee} asRow={state.viewMode === "list"} />
             </Card>

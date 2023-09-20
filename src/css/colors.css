@@ -1,4 +1,7 @@
 :root {
     --color-background-primary: rgb(173, 216, 230);
     --color-background-secondary: rgb(224, 255, 255);
+    --color-black: rgb(0, 0, 0);
+    --color-white: rgb(255, 255, 255);
+    --color-background-tertiary: rgb(0, 0, 139);
 }
