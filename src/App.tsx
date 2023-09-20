@@ -1,13 +1,16 @@
-import './App.css'
-import EmployeesDataProvider from './providers/EmployeesDataProvider'
-import ItemView from './components/ItemView'
+import "./App.css";
+import EmployeesDataProvider from "./providers/EmployeesDataProvider";
+import ItemView from "./components/ItemView";
+import { ConfigProvider } from "./providers/ConfigProvider";
 
 function App() {
   return (
-    <EmployeesDataProvider>
-      <ItemView />
-    </EmployeesDataProvider>
-  )
+    <ConfigProvider>
+      <EmployeesDataProvider>
+        <ItemView />
+      </EmployeesDataProvider>
+    </ConfigProvider>
+  );
 }
 
-export default App
+export default App;
