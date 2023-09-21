@@ -7,6 +7,7 @@
     @mixin textStyleTitle;
     white-space: nowrap;
     background-color: var(--color-background-secondary);
+    position: relative;
 }
 
 .contact-primary-content {
@@ -29,6 +30,7 @@
 
 .contact-social-links {
     line-height: 1;
+    right: 8px;
 }
 
 .contact-social-links > * {
@@ -41,8 +43,13 @@
     height: 128px;
 }
 
+.contact.contact--as-row .contact-social-links {
+    position: absolute;
+}
+
 .contact.contact--as-row .contact-image {
     width: auto;
+    aspect-ratio: 3/4;
 }
 
 .contact.contact--as-row .contact-social-links {
@@ -64,6 +71,10 @@
         justify-content: space-between;
         align-items: end;
         padding: 8px 16px 16px;
+    }
+
+    .contact.contact--as-row .contact-social-links {
+        position: static;
     }
 
     .contact.contact--as-row .contact-primary-content {
